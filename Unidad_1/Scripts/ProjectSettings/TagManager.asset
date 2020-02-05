@@ -8,6 +8,7 @@ TagManager:
   - enemigo
   - limiteEnemigo
   - GameManager
+  - mostrarEscudo
   layers:
   - Default
   - TransparentFX
