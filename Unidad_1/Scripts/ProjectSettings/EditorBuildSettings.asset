@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/menu/menu.unity
+    guid: ef74b189554ac524ab54c1d43be8bc21
+  - enabled: 1
     path: Assets/DispararEnemigo.unity
     guid: 303255edc01773b4faecaa670b8d025b
   m_configObjects: {}

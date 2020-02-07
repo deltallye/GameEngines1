@@ -61,8 +61,10 @@
      <Compile Include="Assets\enemigoAbeja.cs" />
      <Compile Include="Assets\gameManager.cs" />
      <Compile Include="Assets\highscore.cs" />
+     <Compile Include="Assets\menu\menuInicio.cs" />
      <Compile Include="Assets\movEscudo.cs" />
      <Compile Include="Assets\movimiento.cs" />
+     <Compile Include="Assets\Scenes\menuPrincipal.cs" />
      <Compile Include="Assets\spawnAbeja.cs" />
      <Compile Include="Assets\spawner.cs" />
      <Compile Include="Assets\vidaActual.cs" />
