@@ -58,11 +58,14 @@
      <Compile Include="Assets\bala.cs" />
      <Compile Include="Assets\disparar.cs" />
      <Compile Include="Assets\enemigo.cs" />
+     <Compile Include="Assets\enemigoAbeja.cs" />
      <Compile Include="Assets\gameManager.cs" />
      <Compile Include="Assets\highscore.cs" />
      <Compile Include="Assets\movEscudo.cs" />
      <Compile Include="Assets\movimiento.cs" />
+     <Compile Include="Assets\spawnAbeja.cs" />
      <Compile Include="Assets\spawner.cs" />
+     <Compile Include="Assets\vidaActual.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/sears/Desktop/8vo_semestre/GameEngines1/Unidad_1/Scripts/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

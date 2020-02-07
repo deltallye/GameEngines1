@@ -9,7 +9,7 @@ public class spawner : MonoBehaviour
     public GameObject enemigoGame0;
     float y;
     public float tiempo; //cada cuanto tiempo queramos que aparezca
-    float contador; //estar condando el tiempo
+    public float contador; //estar condando el tiempo
     // Start is called before the first frame update
     void Start()
     {
