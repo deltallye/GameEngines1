@@ -11,7 +11,8 @@ public class movimiento : MonoBehaviour
     //Objetos para limitar el espacio
     public GameObject limiteD;
     public GameObject limiteI;
-
+    public GameObject limiteTop;
+    public GameObject limiteBot;
 
     void Start()
     {
@@ -42,12 +43,19 @@ public class movimiento : MonoBehaviour
         //Mover arriba-abajo
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            y = y + (vel * Time.deltaTime);
+            if(transform.position.y < limiteTop.transform.position.y)
+            {
+                y = y + (vel * Time.deltaTime);
+            }
+            
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            y = y - (vel * Time.deltaTime);
+            if (transform.position.y > limiteBot.transform.position.y)
+            {
+                y = y - (vel * Time.deltaTime);
+            }
         }
         //La posicion actual del objeto
         transform.position = new Vector3(x, y, 0);

@@ -5,6 +5,8 @@ using UnityEngine;
 public class disparar : MonoBehaviour
 {
     public GameObject bala;
+    public float tiempoDisparo; //Los segundos que va a tardar para disparar otro
+    public float sigDisparo;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +16,9 @@ public class disparar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > sigDisparo)
         {
+            sigDisparo = Time.time + tiempoDisparo;
             Instantiate(bala, transform.position, transform.rotation);
         }
     }
