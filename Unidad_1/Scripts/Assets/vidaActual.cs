@@ -7,6 +7,7 @@ public class vidaActual : MonoBehaviour
 {
     public float vidaMax = 100f;
     float currentVida;
+    public float verificarVida;
     public Image barraDeVida;
     // Start is called before the first frame update
     void Start()
@@ -26,8 +27,15 @@ public class vidaActual : MonoBehaviour
         if (other.gameObject.tag == "enemigo" || other.gameObject.tag == "abejaEnemigo")
         {
             currentVida -= 10;
+            vidaActualizada(currentVida);
             barraDeVida.fillAmount = currentVida / 100f;
             Destroy(other.gameObject);
         }
+    }
+
+    public void vidaActualizada(float vida)
+    {
+        verificarVida = vida;
+        Debug.Log(verificarVida);
     }
 }

@@ -299,6 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMax: 100
+  verificarVida: 0
   barraDeVida: {fileID: 484310532}
 --- !u!4 &66223890 stripped
 Transform:
@@ -822,7 +823,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.47e-43, y: 7.92071e+18, z: 5.47e-43, w: 3.97e-43}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 7.1644594e-32}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 2.9
@@ -1424,7 +1425,7 @@ GameObject:
   - component: {fileID: 1105633425}
   - component: {fileID: 1105633426}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: dragonGeneral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

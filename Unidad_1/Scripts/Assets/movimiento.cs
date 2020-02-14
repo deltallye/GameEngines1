@@ -14,6 +14,8 @@ public class movimiento : MonoBehaviour
     public GameObject limiteTop;
     public GameObject limiteBot;
 
+    vidaActual laifu;
+
     void Start()
     {
         vel = 4;
@@ -58,7 +60,7 @@ public class movimiento : MonoBehaviour
             }
         }
         //La posicion actual del objeto
-        transform.position = new Vector3(x, y, 0);
+        transform.position = new Vector3(x, y, 0);  
     }
 
 

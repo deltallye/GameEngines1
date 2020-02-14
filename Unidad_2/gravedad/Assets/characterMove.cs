@@ -10,11 +10,13 @@ public class characterMove : MonoBehaviour
     Vector3 velocidad;
     public float jumpForce;
     public bool grnd;
+
     // Use this for initialization
     void Start()
     {
         //Vector3 move = new Vector3;
         controlador = GetComponent<CharacterController>();
+     
     }
 
     // Update is called once per frame

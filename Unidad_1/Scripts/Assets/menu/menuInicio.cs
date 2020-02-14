@@ -19,5 +19,11 @@ public class menuInicio : MonoBehaviour
     public void empezarJuego()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+
+    public void salir()
+    {
+        Application.Quit();
     }
 }
