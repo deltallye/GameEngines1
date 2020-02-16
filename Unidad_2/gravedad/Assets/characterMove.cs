@@ -10,7 +10,7 @@ public class characterMove : MonoBehaviour
     Vector3 velocidad;
     public float jumpForce;
     public bool grnd;
-
+        
     // Use this for initialization
     void Start()
     {
@@ -50,6 +50,15 @@ public class characterMove : MonoBehaviour
     	{
         	velocidad.y = 0;
     	}*/
+
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.gameObject.tag == "enemy1")
+        {
+            Destroy(hit.gameObject);
+        }
     }
 
 }

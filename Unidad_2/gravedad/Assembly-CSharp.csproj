@@ -63,8 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\balaRigid.cs" />
     <Compile Include="Assets\characterMove.cs" />
+    <Compile Include="Assets\disparar.cs" />
     <Compile Include="Assets\enemigo.cs" />
+    <Compile Include="Assets\enemigosSpawnRandom.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/sears/Desktop/8vo_semestre/GameEngines1/Unidad_2/gravedad/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

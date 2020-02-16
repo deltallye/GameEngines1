@@ -6,6 +6,7 @@ TagManager:
   tags:
   - player
   - enemy1
+  - punto
   layers:
   - Default
   - TransparentFX
