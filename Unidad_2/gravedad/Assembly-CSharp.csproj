@@ -68,6 +68,9 @@
     <Compile Include="Assets\disparar.cs" />
     <Compile Include="Assets\enemigo.cs" />
     <Compile Include="Assets\enemigosSpawnRandom.cs" />
+    <Compile Include="Assets\GameManager.cs" />
+    <Compile Include="Assets\puntuacion.cs" />
+    <Compile Include="Assets\vidaActual.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/sears/Desktop/8vo_semestre/GameEngines1/Unidad_2/gravedad/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

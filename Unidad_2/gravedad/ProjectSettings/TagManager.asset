@@ -7,6 +7,8 @@ TagManager:
   - player
   - enemy1
   - punto
+  - bala
+  - GameManager
   layers:
   - Default
   - TransparentFX

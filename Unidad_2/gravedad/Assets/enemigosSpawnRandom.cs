@@ -6,13 +6,19 @@ public class enemigosSpawnRandom : MonoBehaviour
 {
     public GameObject [] spawner;
     public GameObject enemigoGo;
+
+    GameObject[] totalEnemigos;
     //Generar un contador que esté generando un enemigo
     public float tiempoSpawn;
     float contador;
     int index;
+
+    //gghk
+
     // Start is called before the first frame update
     void Start()
     {
+        totalEnemigos = GameObject.FindGameObjectsWithTag("enemy1");
         newEnemy();
     }
 

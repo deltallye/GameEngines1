@@ -8,7 +8,13 @@ public class enemigo : MonoBehaviour
     GameObject jugador;
     public bool estado;
     GameObject punto;
-    //GameObject ene1;
+    //si se murio
+    GameObject gameManagerObject;
+    vidaActual laifuActual;
+    bool rip;
+
+    //localizar
+    GameObject localizar;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,41 +22,61 @@ public class enemigo : MonoBehaviour
         jugador = GameObject.FindGameObjectWithTag("player");
         estado = true;
         punto = GameObject.FindGameObjectWithTag("punto");
-        /* ene1 = GameObject.FindGameObjectWithTag("enemy1");
-         ene1 = transform.position(transform.position.x, transform.position.y, transform.position.z);*/
+        //localizar
+        localizar = punto;
+        //Te hiciste la morision
+        gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
+        laifuActual = gameManagerObject.GetComponent<vidaActual>();
+        rip = laifuActual.muerto;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.M))
+        //Debug.Log(this.gameObject);
+        if(rip == false)
         {
-            if(estado == true)
+            if (Input.GetKeyDown(KeyCode.M))
             {
-                estado = false;
+                if (estado == true)
+                {
+                    //localizar = punto;
+                    estado = false;
+                }
+                else
+                {
+                    //localizar = jugador;
+                    estado = true;
+                }
+            }
+            enemigoAgente.SetDestination(punto.transform.position);
+            
+            if (estado == true)
+            {
+                enemigoAgente.SetDestination(punto.transform.position);
             }
             else
             {
-                estado = true;
+                enemigoAgente.SetDestination(jugador.transform.position);
             }
-            enemigoAgente.SetDestination(jugador.transform.position);
         }
+        if(rip == true)
+        {
+            //Debug.Log("Se murio");
 
-        if (estado == true)
-        {
             enemigoAgente.SetDestination(punto.transform.position);
         }
-        else
+        
+        
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "player")
         {
-            enemigoAgente.SetDestination(jugador.transform.position);
+            Destroy(this.gameObject);
         }
-        /*if (Input.GetKeyDown(KeyCode.M))
-        {
-            //enemigoAgente.enabled = true;
-            //estado = true;
-            enemigoAgente.SetDestination(punto.transform.position);
-        }
-        //enemigoAgente.SetDestination(jugador.transform.position);*/
+        
     }
 }

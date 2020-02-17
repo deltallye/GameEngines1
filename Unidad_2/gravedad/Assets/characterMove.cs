@@ -10,13 +10,23 @@ public class characterMove : MonoBehaviour
     Vector3 velocidad;
     public float jumpForce;
     public bool grnd;
-        
+
+    GameObject yo;
+    //aAA para quitar vida y colisionar
+    GameObject gameManagerObject;
+    vidaActual laifuActual;
+    int restarVida;
     // Use this for initialization
     void Start()
     {
         //Vector3 move = new Vector3;
         controlador = GetComponent<CharacterController>();
-     
+        yo = GameObject.FindGameObjectWithTag("player");
+        //Colisionar y quitar vida
+        gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
+        laifuActual = gameManagerObject.GetComponent<vidaActual>();
+        restarVida = 1;
+
     }
 
     // Update is called once per frame
@@ -46,6 +56,12 @@ public class characterMove : MonoBehaviour
             velocidad.y += jumpForce;
         }
 
+        if(laifuActual.muerto == true)
+        {
+            yo.SetActive(false);
+        }
+
+
         /*if(controlador.isGrounded && velocidad.y < 0)
     	{
         	velocidad.y = 0;
@@ -57,8 +73,10 @@ public class characterMove : MonoBehaviour
     {
         if(hit.gameObject.tag == "enemy1")
         {
+            laifuActual.quitarVida(restarVida);
             Destroy(hit.gameObject);
         }
+        
     }
 
 }
