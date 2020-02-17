@@ -16,6 +16,9 @@ public class characterMove : MonoBehaviour
     GameObject gameManagerObject;
     vidaActual laifuActual;
     int restarVida;
+
+    //Menusito
+    menus menuScript;
     // Use this for initialization
     void Start()
     {
@@ -26,6 +29,8 @@ public class characterMove : MonoBehaviour
         gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
         laifuActual = gameManagerObject.GetComponent<vidaActual>();
         restarVida = 1;
+        //menusitos
+        menuScript = gameManagerObject.GetComponent<menus>();
 
     }
 
@@ -59,6 +64,12 @@ public class characterMove : MonoBehaviour
         if(laifuActual.muerto == true)
         {
             yo.SetActive(false);
+            menuScript.gameOverScreen();
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            menuScript.pausedGame();
         }
 
 

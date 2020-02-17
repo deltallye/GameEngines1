@@ -16,7 +16,7 @@ public class vidaActual : MonoBehaviour
     void Start()
     {
         muerto = false;
-        vidaTotal = 1;
+        //vidaTotal = 1;
         charaObject = GameObject.FindGameObjectWithTag("player");
     }
 

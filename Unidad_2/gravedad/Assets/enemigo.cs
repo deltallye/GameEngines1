@@ -13,6 +13,8 @@ public class enemigo : MonoBehaviour
     vidaActual laifuActual;
     bool rip;
 
+    GameObject seguir;
+
     //localizar
     GameObject localizar;
     // Start is called before the first frame update
@@ -26,16 +28,16 @@ public class enemigo : MonoBehaviour
         localizar = punto;
         //Te hiciste la morision
         gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
-        laifuActual = gameManagerObject.GetComponent<vidaActual>();
-        rip = laifuActual.muerto;
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        laifuActual = gameManagerObject.GetComponent<vidaActual>();
+        rip = laifuActual.muerto;
         //Debug.Log(this.gameObject);
-        if(rip == false)
+        if (rip == false)
         {
             if (Input.GetKeyDown(KeyCode.M))
             {
@@ -54,14 +56,16 @@ public class enemigo : MonoBehaviour
             
             if (estado == true)
             {
-                enemigoAgente.SetDestination(punto.transform.position);
+              
+               enemigoAgente.SetDestination(punto.transform.position);
             }
             else
             {
                 enemigoAgente.SetDestination(jugador.transform.position);
             }
         }
-        if(rip == true)
+        //Debug.Log("Se murio");
+        if (rip == true)
         {
             //Debug.Log("Se murio");
 
@@ -76,7 +80,6 @@ public class enemigo : MonoBehaviour
         if (hit.gameObject.tag == "player")
         {
             Destroy(this.gameObject);
-        }
-        
+        }   
     }
 }
