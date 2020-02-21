@@ -39,6 +39,7 @@ public class enemigo : MonoBehaviour
         //Debug.Log(this.gameObject);
         if (rip == false)
         {
+            enemigoAgente.SetDestination(jugador.transform.position);
             if (Input.GetKeyDown(KeyCode.M))
             {
                 if (estado == true)
@@ -52,7 +53,6 @@ public class enemigo : MonoBehaviour
                     estado = true;
                 }
             }
-            enemigoAgente.SetDestination(punto.transform.position);
             
             if (estado == true)
             {
@@ -67,8 +67,6 @@ public class enemigo : MonoBehaviour
         //Debug.Log("Se murio");
         if (rip == true)
         {
-            //Debug.Log("Se murio");
-
             enemigoAgente.SetDestination(punto.transform.position);
         }
         

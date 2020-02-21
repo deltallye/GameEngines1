@@ -45,6 +45,7 @@ public class characterMove : MonoBehaviour
         if (move != Vector3.zero)//Si el vector de movimiento no es igual a 0
         {
             transform.forward = move;
+            transform.Translate(0.2f, 0.2f, 0.2f);
         }
         //gravedad
         velocidad.y += gravedad * Time.deltaTime;

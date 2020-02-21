@@ -7,12 +7,17 @@ public class menus : MonoBehaviour
 {
     public GameObject gameOverMenu;
     public GameObject pausar;
+    public GameObject iniciar;
+    public GameObject puntuacion;
+    //public GameObject 
     // Start is called before the first frame update
     void Start()
     {
         gameOverMenu.SetActive(false);
         pausar.SetActive(false);
-        Time.timeScale = 1;
+        iniciar.SetActive(true);
+        puntuacion.SetActive(false);
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -21,6 +26,12 @@ public class menus : MonoBehaviour
         
     }
 
+    public void iniciarJuego()
+    {
+        iniciar.SetActive(false);
+        puntuacion.SetActive(true);
+        Time.timeScale = 1;
+    }
     public void gameOverScreen()
     {
         gameOverMenu.SetActive(true);
@@ -30,6 +41,12 @@ public class menus : MonoBehaviour
     public void RestartLevelButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
+
+    public void reanudarNivel()
+    {
+        pausar.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void pausedGame()
