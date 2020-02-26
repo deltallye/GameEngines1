@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Nisty.unity
+- path: C:/Users/uacj/Desktop/2DCharacterControllerTutorial-skeleton_project/Assets/Main.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
