@@ -48,13 +48,20 @@ public class nistyMov : MonoBehaviour
         if (controlador.isGrounded && velocidad.y < 0)
         {
             velocidad.y = 0;
-            //velocidad.y = -gravedad * Time.deltaTime;
-            if (/*Input.GetButton("Jump")*/ Input.GetKeyDown(KeyCode.UpArrow) && controlador.isGrounded)
+            if (Input.GetKeyDown(KeyCode.UpArrow) && controlador.isGrounded)
             {
-            velocidad.y += fuerzaSalto;
+                velocidad.y += fuerzaSalto;
             }
         }
         grnd = controlador.isGrounded;
         
+    }
+
+
+    public void sumarSalto(float y)
+    {
+          
+        velocidad.y += fuerzaSalto;
+        fuerzaSalto = y;
     }
 }

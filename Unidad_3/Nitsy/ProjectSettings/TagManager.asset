@@ -9,6 +9,7 @@ TagManager:
   - nisty
   - limiteCamara
   - colisionCapsula
+  - noTrampo
   layers:
   - Default
   - TransparentFX
