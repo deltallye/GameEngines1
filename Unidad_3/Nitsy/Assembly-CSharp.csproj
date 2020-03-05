@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\camaraMov.cs" />
     <Compile Include="Assets\lava.cs" />
+    <Compile Include="Assets\Mecanicas\activarTrampolin.cs" />
     <Compile Include="Assets\Mecanicas\trampolinY.cs" />
     <Compile Include="Assets\nistyMov.cs" />
     <Reference Include="Unity.Timeline.Editor">

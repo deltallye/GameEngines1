@@ -5,24 +5,33 @@ using UnityEngine;
 public class nistyMov : MonoBehaviour
 {
    
+    // Nisty :3
     CharacterController controlador;
 
-    //movimiento/gravedad
+    //movimiento/gravedad :3
     public float speed;
     public float gravedad;
     public float fuerzaSalto;
+    // salto mas alto
+    public float saltoMasAlto;
     public bool grnd;
     Vector2 velocidad;
-    
+
+    public float fuerzaSaltoActual;
+
+    // Caracteristicas del trampolin
+    GameObject trampolin;
     void Start()
     {
         controlador = GetComponent<CharacterController>();
-        //controller = GetComponent<CharacterController>();
+        trampolin = GameObject.FindGameObjectWithTag("trampolinY");
+        velocidad.y = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        fuerzaSaltoActual = velocidad.y;
         salto();
         caminar();
 
@@ -37,7 +46,6 @@ public class nistyMov : MonoBehaviour
         {
             transform.forward = move;
         }
-        
     }
 
     void salto(){
@@ -50,18 +58,20 @@ public class nistyMov : MonoBehaviour
             velocidad.y = 0;
             if (Input.GetKeyDown(KeyCode.UpArrow) && controlador.isGrounded)
             {
-                velocidad.y += fuerzaSalto;
+                sumarSalto(fuerzaSalto);
             }
         }
         grnd = controlador.isGrounded;
-        
     }
 
 
     public void sumarSalto(float y)
     {
-          
-        velocidad.y += fuerzaSalto;
-        fuerzaSalto = y;
+        velocidad.y = y;
+    }
+
+    public void gravedadActual(float x)
+    {
+        velocidad.x = x;
     }
 }
