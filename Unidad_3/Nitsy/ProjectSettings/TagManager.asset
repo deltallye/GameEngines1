@@ -19,6 +19,9 @@ TagManager:
   - xPosNegativo
   - xPosPositivo
   - balita
+  - gota
+  - limiteLluvia
+  - paredCol
   layers:
   - Default
   - TransparentFX

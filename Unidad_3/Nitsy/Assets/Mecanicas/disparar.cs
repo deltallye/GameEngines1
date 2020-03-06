@@ -10,11 +10,17 @@ public class disparar : MonoBehaviour
     public float tiempoDisparo;
     public float sigDisparo;
 
+    //puntuacion
+    GameObject obPuntaje;
+    puntuacion puntaje;
+
     //public float tiempoViajeBala;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //puntuacion
+        obPuntaje = GameObject.FindGameObjectWithTag("GameManager");
+        puntaje = obPuntaje.GetComponent<puntuacion>();
     }
 
     // Update is called once per frame
@@ -26,6 +32,11 @@ public class disparar : MonoBehaviour
             sigDisparo = Time.time + tiempoDisparo;
             Instantiate(bala, transform.position, transform.rotation);
 
+        }
+
+        if(puntaje.puntaje > 9)
+        {
+            tiempoDisparo = 0.13F;
         }
     }
 }

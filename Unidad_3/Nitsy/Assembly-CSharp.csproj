@@ -66,10 +66,12 @@
     <Compile Include="Assets\balaRigid.cs" />
     <Compile Include="Assets\camaraMov.cs" />
     <Compile Include="Assets\enemigoMov.cs" />
+    <Compile Include="Assets\gota.cs" />
     <Compile Include="Assets\lava.cs" />
     <Compile Include="Assets\Mecanicas\activarTrampolin.cs" />
     <Compile Include="Assets\Mecanicas\colisionEnemigos.cs" />
     <Compile Include="Assets\Mecanicas\disparar.cs" />
+    <Compile Include="Assets\Mecanicas\spanLluvia.cs" />
     <Compile Include="Assets\Mecanicas\tomarFruta.cs" />
     <Compile Include="Assets\Mecanicas\trampolinY.cs" />
     <Compile Include="Assets\movLimites.cs" />

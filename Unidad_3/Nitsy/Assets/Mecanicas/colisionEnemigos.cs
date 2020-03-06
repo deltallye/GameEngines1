@@ -27,5 +27,11 @@ public class colisionEnemigos : MonoBehaviour
             vida.quitarVida(1);
         }
 
+        if (other.gameObject.tag == "gota")
+        {
+            vida.quitarVida(1);
+            Destroy(other.gameObject);
+        }
+
     }
 }
