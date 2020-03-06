@@ -16,6 +16,9 @@ TagManager:
   - enemigo
   - uva
   - manzana
+  - xPosNegativo
+  - xPosPositivo
+  - balita
   layers:
   - Default
   - TransparentFX

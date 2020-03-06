@@ -19,18 +19,37 @@ public class nistyMov : MonoBehaviour
 
     public float fuerzaSaltoActual;
 
+    // si te hiciste la morision
+    //Mandar una vida
+    GameObject gameObVida;
+    vidaActual vida;
+
     // Caracteristicas del trampolin
     GameObject trampolin;
+
+    //soio
+    GameObject Nisty;
     void Start()
     {
         controlador = GetComponent<CharacterController>();
         trampolin = GameObject.FindGameObjectWithTag("trampolinY");
         velocidad.y = 0;
+
+        //morido?
+        gameObVida = GameObject.FindGameObjectWithTag("GameManager");
+        vida = gameObVida.GetComponent<vidaActual>();
+
+        //soio de nuevo
+        Nisty = GameObject.FindGameObjectWithTag("nisty");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(vida.muerto == true)
+        {
+            Nisty.SetActive(false);
+        }
         fuerzaSaltoActual = velocidad.y;
         salto();
         caminar();

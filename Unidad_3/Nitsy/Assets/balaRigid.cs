@@ -14,6 +14,10 @@ public class balaRigid : MonoBehaviour
 
     private Vector3 distancia;
     // Start is called before the first frame update
+
+    //enemigo
+    GameObject gmObEnemigo;
+    enemigoMov enemigoComp;
     void Start()
     {
         // rigid de la bala
@@ -25,7 +29,9 @@ public class balaRigid : MonoBehaviour
         xpositivo = GameObject.FindGameObjectWithTag("xPositivo");
         xnegativo = GameObject.FindGameObjectWithTag("xNegativo");
 
-        //distancia = xpositivo.transform.position - nisty.transform.position;
+        gmObEnemigo = GameObject.FindGameObjectWithTag("enemigo");
+        enemigoComp = gmObEnemigo.GetComponent<enemigoMov>();
+
     }
 
     // Update is called once per frame
@@ -43,8 +49,16 @@ public class balaRigid : MonoBehaviour
         
         if(other.gameObject.tag == "enemigo")
         {
-            Destroy(other.gameObject);
+            enemigoComp.quitarVidaEnemigo(1);
             Destroy(this.gameObject);
+            
+            if (enemigoComp.vidaEnemigo == 0)
+            {
+                Destroy(other.gameObject);
+                Destroy(this.gameObject);
+            }
+            //Destroy(other.gameObject);
+            
         }
     }
 }

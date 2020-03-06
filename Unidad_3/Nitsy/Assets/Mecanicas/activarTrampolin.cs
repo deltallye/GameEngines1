@@ -25,11 +25,11 @@ public class activarTrampolin : MonoBehaviour
             nistyComp.sumarSalto(saltoMasAlto);
             Debug.Log("Activar");
         }
-
+        /*
         if (other.gameObject.tag == "escalar")
         {
             nistyComp.gravedadActual(-50);
             Debug.Log("gravedad");
-        }
+        }*/
     }
 }

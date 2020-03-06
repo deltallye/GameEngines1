@@ -39,4 +39,9 @@ public class vidaActual : MonoBehaviour
     {
         vidaTotal += vida;
     }
+
+    public void quitarTodaLaVida()
+    {
+        vidaTotal = 0;
+    }
 }

@@ -14,9 +14,12 @@ public class puntuacion : MonoBehaviour
     int contador;
 
     //Mandar una vida
+    GameObject gameObVida;
     vidaActual vida;
     void Start()
     {
+        gameObVida = GameObject.FindGameObjectWithTag("GameManager");
+        vida = gameObVida.GetComponent<vidaActual>();
         objetoTexto.text = textoNuevo;
         contador = 0;
     }
@@ -24,10 +27,10 @@ public class puntuacion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //contador = puntaje;
-        if(contador > 1)
+        objetoTexto.text = puntaje.ToString();
+        if (contador > 9)
         {
-            vida.agregarVida(2);
+            vida.agregarVida(1);
             contador = 0;
         }
     }
@@ -36,5 +39,11 @@ public class puntuacion : MonoBehaviour
     {
         puntaje += x;
         contador += x;
+    }
+
+    public void quitarTodoElPuntaje()
+    {
+        puntaje = 0;
+        contador = 0;
     }
 }
