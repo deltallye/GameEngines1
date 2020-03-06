@@ -63,11 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\balaRigid.cs" />
     <Compile Include="Assets\camaraMov.cs" />
     <Compile Include="Assets\lava.cs" />
     <Compile Include="Assets\Mecanicas\activarTrampolin.cs" />
+    <Compile Include="Assets\Mecanicas\disparar.cs" />
     <Compile Include="Assets\Mecanicas\trampolinY.cs" />
+    <Compile Include="Assets\movLimites.cs" />
     <Compile Include="Assets\nistyMov.cs" />
+    <Compile Include="Assets\puntuacion.cs" />
+    <Compile Include="Assets\vidaActual.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/sears/Desktop/8vo_semestre/aaa/GameEngines1/Unidad_3/Nitsy/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -10,6 +10,12 @@ TagManager:
   - limiteCamara
   - colisionCapsula
   - noTrampo
+  - xPositivo
+  - xNegativo
+  - GameManager
+  - enemigo
+  - uva
+  - manzana
   layers:
   - Default
   - TransparentFX

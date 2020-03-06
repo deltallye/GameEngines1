@@ -21,7 +21,8 @@ public class lava : MonoBehaviour
     {
         if (other.gameObject.tag == "nisty")
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            Nisty.SetActive(false);
         }
         
     }
