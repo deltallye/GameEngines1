@@ -23,12 +23,16 @@ public class nistyMov : MonoBehaviour
     //Mandar una vida
     GameObject gameObVida;
     vidaActual vida;
+    mostrarPantallaTxt gameOver;
 
     // Caracteristicas del trampolin
     GameObject trampolin;
 
     //soio
     GameObject Nisty;
+
+    //Game Manager para ver GameOver
+
     void Start()
     {
         controlador = GetComponent<CharacterController>();
@@ -38,6 +42,7 @@ public class nistyMov : MonoBehaviour
         //morido?
         gameObVida = GameObject.FindGameObjectWithTag("GameManager");
         vida = gameObVida.GetComponent<vidaActual>();
+        gameOver = gameObVida.GetComponent<mostrarPantallaTxt>();
 
         //soio de nuevo
         Nisty = GameObject.FindGameObjectWithTag("nisty");
@@ -48,7 +53,11 @@ public class nistyMov : MonoBehaviour
     {
         if(vida.muerto == true)
         {
+            gameOver.perdiste.gameObject.SetActive(true);
+
+            //gameOver.mostrarPerder();
             Nisty.SetActive(false);
+            
         }
         fuerzaSaltoActual = velocidad.y;
         salto();

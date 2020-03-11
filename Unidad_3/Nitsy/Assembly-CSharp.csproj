@@ -74,6 +74,7 @@
     <Compile Include="Assets\Mecanicas\spanLluvia.cs" />
     <Compile Include="Assets\Mecanicas\tomarFruta.cs" />
     <Compile Include="Assets\Mecanicas\trampolinY.cs" />
+    <Compile Include="Assets\mostrarPantallaTxt.cs" />
     <Compile Include="Assets\movLimites.cs" />
     <Compile Include="Assets\nistyMov.cs" />
     <Compile Include="Assets\puntuacion.cs" />
