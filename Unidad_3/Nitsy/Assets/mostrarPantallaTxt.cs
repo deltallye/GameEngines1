@@ -31,6 +31,7 @@ public class mostrarPantallaTxt : MonoBehaviour
     public void mostrarGanar()
     {
         ganaste.gameObject.SetActive(true);
+        Time.timeScale = 0;
         //ganaste.enabled = true;
     }
 }

@@ -24,7 +24,7 @@ public class vidaActual : MonoBehaviour
     void Update()
     {
         objetoTexto.text = vidaTotal.ToString();
-        if(vidaTotal < 1)
+        if(vidaTotal < 1 || vidaTotal == 0)
         {
             muerto = true;
         }

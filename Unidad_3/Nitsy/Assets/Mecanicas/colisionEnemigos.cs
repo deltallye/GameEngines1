@@ -11,6 +11,7 @@ public class colisionEnemigos : MonoBehaviour
     {
         gameObVida = GameObject.FindGameObjectWithTag("GameManager");
         vida = gameObVida.GetComponent<vidaActual>();
+
     }
 
     // Update is called once per frame

@@ -13,6 +13,10 @@ public class lava : MonoBehaviour
     //puntuacion
     GameObject gameObPuntuacion;
     puntuacion puntaje;
+
+    // pantañlla
+    mostrarPantallaTxt gameOver;
+
     void Start()
     {
         Nisty = GameObject.FindGameObjectWithTag("nisty");
@@ -23,6 +27,9 @@ public class lava : MonoBehaviour
         //puntuacion
         gameObPuntuacion = GameObject.FindGameObjectWithTag("GameManager");
         puntaje = gameObPuntuacion.GetComponent<puntuacion>();
+
+        // asdfg
+        gameOver = gameObPuntuacion.GetComponent<mostrarPantallaTxt>();
 
     }
 
@@ -38,6 +45,7 @@ public class lava : MonoBehaviour
         {
             vida.quitarTodaLaVida();
             puntaje.quitarTodoElPuntaje();
+            gameOver.perdiste.gameObject.SetActive(true);
             Nisty.SetActive(false);
         }
         
