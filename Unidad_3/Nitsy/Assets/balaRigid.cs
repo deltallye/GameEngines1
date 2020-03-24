@@ -18,14 +18,15 @@ public class balaRigid : MonoBehaviour
     //enemigo
     GameObject gmObEnemigo;
     enemigoMov enemigoComp;
-
+    /*
     //color material
     public Material nuevoColor;
     Renderer render;
-
+    GameObject prefabBala;*/
+    
     //puntuacion
     GameObject obPuntaje;
-    puntuacion puntaje;
+    puntuacion puntaje; 
     void Start()
     {
         // rigid de la bala
@@ -44,8 +45,7 @@ public class balaRigid : MonoBehaviour
         obPuntaje = GameObject.FindGameObjectWithTag("GameManager");
         puntaje = obPuntaje.GetComponent<puntuacion>();
 
-        //render
-        render = GetComponent<Renderer>();
+
 
     }
 
@@ -60,7 +60,7 @@ public class balaRigid : MonoBehaviour
 
         if(puntaje.puntaje > 9)
         {
-            render.sharedMaterial = nuevoColor;
+            //render.sharedMaterial = nuevoColor;
             fuerza += 5;
         }
     }
@@ -70,14 +70,14 @@ public class balaRigid : MonoBehaviour
         
         if(other.gameObject.tag == "enemigo")
         {
-            enemigoComp.quitarVidaEnemigo(1);
+            //enemigoComp.quitarVidaEnemigo(1);
             Destroy(this.gameObject);
             
-            if (enemigoComp.vidaEnemigo == 0)
+            /*if (enemigoComp.vidaEnemigo == 0)
             {
                 Destroy(other.gameObject);
                 Destroy(this.gameObject);
-            }
+            }*/
             
         }
         if (other.gameObject.tag == "paredCol")

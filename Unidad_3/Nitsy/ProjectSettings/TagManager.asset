@@ -23,6 +23,7 @@ TagManager:
   - limiteLluvia
   - paredCol
   - frutaMiel
+  - prefabBala
   layers:
   - Default
   - TransparentFX

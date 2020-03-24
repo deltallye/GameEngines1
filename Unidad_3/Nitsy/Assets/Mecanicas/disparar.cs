@@ -14,13 +14,21 @@ public class disparar : MonoBehaviour
     GameObject obPuntaje;
     puntuacion puntaje;
 
-    //public float tiempoViajeBala;
-    // Start is called before the first frame update
+    //sonido
+    public GameObject disparo;
+    AudioSource disparoSound;
+
+    //mostrarUpgrade
+    public GameObject upgradePunto;
     void Start()
     {
         //puntuacion
         obPuntaje = GameObject.FindGameObjectWithTag("GameManager");
         puntaje = obPuntaje.GetComponent<puntuacion>();
+        upgradePunto.SetActive(false);
+
+        //sonido
+        disparoSound = disparo.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,14 +37,16 @@ public class disparar : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > sigDisparo)
         {
+            disparoSound.Play();
             sigDisparo = Time.time + tiempoDisparo;
             Instantiate(bala, transform.position, transform.rotation);
 
         }
 
-        if(puntaje.puntaje > 9)
+        if(puntaje.puntaje > 14)
         {
             tiempoDisparo = 0.13F;
+            upgradePunto.SetActive(true);
         }
     }
 }

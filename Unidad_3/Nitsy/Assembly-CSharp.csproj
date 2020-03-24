@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\balaRigid.cs" />
     <Compile Include="Assets\camaraMov.cs" />
+    <Compile Include="Assets\cambiarColorBala.cs" />
     <Compile Include="Assets\enemigoMov.cs" />
     <Compile Include="Assets\gota.cs" />
     <Compile Include="Assets\lava.cs" />

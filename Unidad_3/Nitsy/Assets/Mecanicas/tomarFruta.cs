@@ -8,12 +8,19 @@ public class tomarFruta : MonoBehaviour
     puntuacion agregar;
 
     mostrarPantallaTxt ganaste;
+
+    //para la vida
+    vidaActual vida;
+
     void Start()
     {
         obAgregar = GameObject.FindGameObjectWithTag("GameManager");
         agregar = obAgregar.GetComponent<puntuacion>();
 
         ganaste = obAgregar.GetComponent<mostrarPantallaTxt>();
+
+        //vida
+        vida = obAgregar.GetComponent<vidaActual>();
     }
 
     // Update is called once per frame
@@ -24,10 +31,11 @@ public class tomarFruta : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        
         if (other.gameObject.tag == "uva")
         {
             //Destroy(other.gameObject);
+            
             agregar.agregarPuntaje(1);
             Destroy(other.gameObject);
         }

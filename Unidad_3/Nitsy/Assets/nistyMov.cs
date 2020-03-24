@@ -31,6 +31,10 @@ public class nistyMov : MonoBehaviour
     //soio
     GameObject Nisty;
 
+    //sonido
+    public GameObject saltar;
+    AudioSource saltoSound;
+    menus pausarJuego;
     //Game Manager para ver GameOver
 
     void Start()
@@ -46,6 +50,12 @@ public class nistyMov : MonoBehaviour
 
         //soio de nuevo
         Nisty = GameObject.FindGameObjectWithTag("nisty");
+
+        //sonido
+        saltoSound = saltar.GetComponent<AudioSource>();
+
+        //pausar
+        pausarJuego = gameObVida.GetComponent<menus>();
     }
 
     // Update is called once per frame
@@ -57,7 +67,13 @@ public class nistyMov : MonoBehaviour
 
             //gameOver.mostrarPerder();
             Nisty.SetActive(false);
+            Time.timeScale = .08f;
             
+        }
+
+        if (Input.GetKey(KeyCode.P))
+        {
+            pausarJuego.pausarJuego();
         }
         fuerzaSaltoActual = velocidad.y;
         salto();
@@ -86,6 +102,7 @@ public class nistyMov : MonoBehaviour
             velocidad.y = 0;
             if (Input.GetKeyDown(KeyCode.UpArrow) && controlador.isGrounded)
             {
+                saltoSound.Play();
                 sumarSalto(fuerzaSalto);
             }
         }
@@ -95,6 +112,7 @@ public class nistyMov : MonoBehaviour
 
     public void sumarSalto(float y)
     {
+        saltoSound.Play();
         velocidad.y = y;
     }
 

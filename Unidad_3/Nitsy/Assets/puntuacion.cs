@@ -16,12 +16,20 @@ public class puntuacion : MonoBehaviour
     //Mandar una vida
     GameObject gameObVida;
     vidaActual vida;
+
+    //sonido
+    public GameObject comer;
+    AudioSource comerSound;
+
     void Start()
     {
         gameObVida = GameObject.FindGameObjectWithTag("GameManager");
         vida = gameObVida.GetComponent<vidaActual>();
         objetoTexto.text = textoNuevo;
         contador = 0;
+
+        //sonido
+        comerSound = comer.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +45,7 @@ public class puntuacion : MonoBehaviour
 
     public void agregarPuntaje(int x)
     {
+        comerSound.Play();
         puntaje += x;
         contador += x;
     }

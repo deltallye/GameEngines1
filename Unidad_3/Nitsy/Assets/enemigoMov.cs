@@ -16,18 +16,30 @@ public class enemigoMov : MonoBehaviour
     public float velocidad;
 
     //vida
-    public int vidaEnemigo;
+    private int vidaEnemigo = 3;
     public int vidaQuitada;
+
+    //sonido
+    public GameObject matar;
+    AudioSource matarSound;
     void Start()
     {
         vaALaDerecha = false;
-        vidaEnemigo = 3;
+        //sonido
+        matarSound = matar.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        vidaQuitada = vidaEnemigo;
+        //vidaQuitada = vidaEnemigo;
+        if (vidaEnemigo == 0)
+        {
+            ///Destroy(this.gameObject);
+            
+            this.gameObject.SetActive(false);
+            
+        }
         
         if (vaALaDerecha == false)
         {
@@ -55,34 +67,38 @@ public class enemigoMov : MonoBehaviour
                 transform.Rotate(0, 180, 0);
                 vaALaDerecha = false;
             }
-
-            if(vidaQuitada == 0)
-            {
-                Destroy(this.gameObject);
-            }
         }
     }
-
+    /*
     public void quitarVidaEnemigo(int x)
     {
         vidaEnemigo -= x;
-    }
 
-   /* private void OnTriggerEnter(Collider other)
+        if (vidaQuitada == 0)
+        {
+            ///Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+        }
+    }*/
+
+    private void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.tag == "balita")
         {
             // enemigoComp.quitarVidaEnemigo(1);
             //Destroy(this.gameObject);
+            //this.gameObject.SetActive(false);
+     
+            vidaEnemigo -= 1;
+            matarSound.Play();
             /*
-            if (enemigoComp.vidaEnemigo == 0)
+            if (vidaQuitada == 0)
             {
-                Destroy(other.gameObject);
-                Destroy(this.gameObject);
-            }
-            //Destroy(other.gameObject);
+                ///Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+            }*/
 
         }
-    }*/
+    }
 }
