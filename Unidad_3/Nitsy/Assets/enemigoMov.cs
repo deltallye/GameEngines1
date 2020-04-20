@@ -32,8 +32,8 @@ public class enemigoMov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //vidaQuitada = vidaEnemigo;
-        if (vidaEnemigo == 0)
+        vidaQuitada = vidaEnemigo;
+        if (vidaEnemigo <= 0)
         {
             ///Destroy(this.gameObject);
             

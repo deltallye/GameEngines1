@@ -35,9 +35,10 @@ public class vidaActual : MonoBehaviour
     {
         
         objetoTexto.text = vidaTotal.ToString();
-        if(vidaTotal < 1 || vidaTotal == 0)
+        if(vidaTotal < 1 || vidaTotal == 0 || vidaTotal <= 0)
         {
             muerto = true;
+            Time.timeScale = .08f;
         }
 
         barraDeVida.fillAmount = vidaTotal / vidaMax;

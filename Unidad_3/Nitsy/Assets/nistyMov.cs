@@ -63,11 +63,12 @@ public class nistyMov : MonoBehaviour
     {
         if(vida.muerto == true)
         {
+            //Time.timeScale = .08f;
             gameOver.perdiste.gameObject.SetActive(true);
 
             //gameOver.mostrarPerder();
             Nisty.SetActive(false);
-            Time.timeScale = .08f;
+            
             
         }
 
