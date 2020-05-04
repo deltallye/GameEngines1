@@ -12,8 +12,9 @@ public class menus : MonoBehaviour
 
     //pantallas
     public GameObject pausa;
-    public GameObject opciones;
+    //public GameObject opciones;
     public GameObject controles;
+    public GameObject creditos;
 
     //musica
     public GameObject musica;
@@ -32,6 +33,9 @@ public class menus : MonoBehaviour
         //pantalla para Pausa
         pausa.SetActive(false);
 
+        //pantalla para creditos
+        creditos.SetActive(false);
+
         fondo = musica.GetComponent<AudioSource>();
         //fondo.playOnAwake = false;
         //fondo.mute = true;
@@ -49,6 +53,7 @@ public class menus : MonoBehaviour
         inicioPantalla.SetActive(false);
         pausa.SetActive(false);
         controles.SetActive(false);
+        creditos.SetActive(false);
 
         score.SetActive(true);
         nisty.SetActive(true);
@@ -79,6 +84,20 @@ public class menus : MonoBehaviour
     {
         inicioPantalla.SetActive(false);
         controles.SetActive(true);
+    }
+
+    public void mostrarCreditos()
+    {
+        inicioPantalla.SetActive(false);
+        creditos.SetActive(true);
+    }
+
+    public void volverInicio()
+    {
+        inicioPantalla.SetActive(true);
+        creditos.SetActive(false);
+        controles.SetActive(false);
+        pausa.SetActive(false);
     }
     public void salir()
     {

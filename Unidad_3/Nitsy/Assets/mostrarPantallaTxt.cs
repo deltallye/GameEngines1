@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class mostrarPantallaTxt : MonoBehaviour
 {
-    public Text ganaste;
-    public Text perdiste;
+    //public Text ganaste;
+    //public Text perdiste;
+    public GameObject ganaste;
+    public GameObject perdiste;
     // Start is called before the first frame update
     void Start()
     {
