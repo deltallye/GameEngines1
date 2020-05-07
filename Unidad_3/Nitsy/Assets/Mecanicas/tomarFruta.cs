@@ -51,7 +51,7 @@ public class tomarFruta : MonoBehaviour
         {
             //Destroy(other.gameObject);
             ganaste.mostrarGanar();
-            agregar.agregarPuntaje(2);
+            //agregar.agregarPuntaje(2);
             Destroy(other.gameObject);
         }
     }

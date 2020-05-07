@@ -72,6 +72,7 @@
     <Compile Include="Assets\Mecanicas\activarTrampolin.cs" />
     <Compile Include="Assets\Mecanicas\colisionEnemigos.cs" />
     <Compile Include="Assets\Mecanicas\disparar.cs" />
+    <Compile Include="Assets\Mecanicas\manejoNivel.cs" />
     <Compile Include="Assets\Mecanicas\spanLluvia.cs" />
     <Compile Include="Assets\Mecanicas\tomarFruta.cs" />
     <Compile Include="Assets\Mecanicas\trampolinY.cs" />
