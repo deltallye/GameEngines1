@@ -41,8 +41,6 @@ public class menus : MonoBehaviour
         //fondo.mute = true;
         Time.timeScale = 0;
     }
-
-    // Update is called once per frame
     void Update()
     {
         
@@ -64,6 +62,9 @@ public class menus : MonoBehaviour
     public void reiniciar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        
+        //inicioPantalla.SetActive(false);
+        //iniciarJuego();
     }
 
     public void pausarJuego()
