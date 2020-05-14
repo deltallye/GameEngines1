@@ -31,29 +31,4 @@ public class trampolinY : MonoBehaviour
     }
    
 
-   /*     
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "colisionCapsula")
-        {
-            mover.sumarSalto(sumarFuerza);
-            sueloTrampolin = true;
-            Debug.Log("Activar");
-        }
-    }
-    */
-
-    /*
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "colisionCapsula" && controlador.isGrounded)
-        {
-            sueloTrampolin = true;
-        }
-        else
-        {
-            sueloTrampolin = false;
-        }
-    }*/
-
 }

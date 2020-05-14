@@ -15,7 +15,7 @@ public class nistyMov : MonoBehaviour
     // salto mas alto
     public float saltoMasAlto;
     public bool grnd;
-    Vector2 velocidad;
+    public Vector2 velocidad;
 
     public float fuerzaSaltoActual;
 
