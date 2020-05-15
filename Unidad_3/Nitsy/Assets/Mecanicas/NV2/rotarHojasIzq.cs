@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotarHojas : MonoBehaviour
+public class rotarHojasIzq : MonoBehaviour
 {
     //objeto del pivote
     public Transform custonPivot;
@@ -32,13 +32,14 @@ public class rotarHojas : MonoBehaviour
 
         girarAbajo();
         girarArriba();
+            
 
-        if(rigidSuelo.transform.rotation.z <= -0.4) //desaparecer suelo
+        if (rigidSuelo.transform.rotation.z >= 0.4) //desaparecer suelo
         {
             rigidSuelo.SetActive(false);
         }
 
-        if (rigidSuelo.transform.rotation.z >= -0.4)
+        if (rigidSuelo.transform.rotation.z <= 0.4)
         {
             rigidSuelo.SetActive(true);
         }
@@ -54,27 +55,31 @@ public class rotarHojas : MonoBehaviour
 
     public void girarAbajo()
     {
+        Debug.Log("girando" + this.transform.rotation.z);
         if (deboGirar == true && tenerAxisNormal == true)
         {
             this.transform.RotateAround(custonPivot.position, new Vector3(0, 0, 1 * Time.deltaTime), angulo);
+            
         }
 
-        if (this.transform.rotation.z <= -0.7 && deboGirar == true)// limite abajo
+        if (this.transform.rotation.z >= 0.7 && deboGirar == true)// limite abajo
         {
             deboGirar = false;
             tenerAxisNormal = false;
+            Debug.Log("Termina de girar hacia abajo" + this.transform.rotation.z);
         }
     }
 
     public void girarArriba()
     {
-        if(transform.rotation.z < -0.008 && tenerAxisNormal == false)// limite arriba
+        if (transform.rotation.z > 0 && tenerAxisNormal == false)// limite arriba
         {
             //mover arriba
-            this.transform.RotateAround(custonPivot.position, new Vector3(0, 0, 1 * Time.deltaTime), 2);
+            Debug.Log("regresar hacia arriba" + this.transform.rotation.z);
+            this.transform.RotateAround(custonPivot.position, new Vector3(0, 0, 1 * Time.deltaTime), -2);
         }
-
-        if (transform.rotation.z > -0.008 )
+        
+        if (transform.rotation.z < 0)
         {
             //detener movimiento
             tenerAxisNormal = true;

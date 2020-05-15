@@ -76,6 +76,7 @@
     <Compile Include="Assets\Mecanicas\Nivel3\Tigre.cs" />
     <Compile Include="Assets\Mecanicas\NV2\romperMuro.cs" />
     <Compile Include="Assets\Mecanicas\NV2\rotarHojas.cs" />
+    <Compile Include="Assets\Mecanicas\NV2\rotarHojasIzq.cs" />
     <Compile Include="Assets\Mecanicas\spanLluvia.cs" />
     <Compile Include="Assets\Mecanicas\tomarFruta.cs" />
     <Compile Include="Assets\Mecanicas\trampolinY.cs" />
