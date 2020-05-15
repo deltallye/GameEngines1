@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class nistyMov : MonoBehaviour
+public class nistyMovDobleSalto : MonoBehaviour
 {
-   
     // Nisty :3
     CharacterController controlador;
 
@@ -37,11 +36,9 @@ public class nistyMov : MonoBehaviour
     menus pausarJuego;
     //Game Manager para ver GameOver
 
-
     //cantidad de saltos
     public float cantidadSaltos;
-    public float saltoOportunidad;
-    public bool estaSaltando;
+    public bool comprobarSaltos;
 
     void Start()
     {
@@ -63,21 +60,23 @@ public class nistyMov : MonoBehaviour
         //pausar
         pausarJuego = gameObVida.GetComponent<menus>();
 
-        estaSaltando = false;
+        //saltos
+        comprobarSaltos = true;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(vida.muerto == true)
+        if (vida.muerto == true)
         {
             //Time.timeScale = .08f;
             gameOver.perdiste.gameObject.SetActive(true);
 
             //gameOver.mostrarPerder();
             Nisty.SetActive(false);
-            
-            
+
+
         }
 
         if (Input.GetKey(KeyCode.P))
@@ -100,9 +99,9 @@ public class nistyMov : MonoBehaviour
             transform.forward = move;
         }
     }
-
     /*
-    void salto(){
+    void salto()
+    {
         //gravedad
         velocidad.y += gravedad * Time.deltaTime;
         controlador.Move(velocidad * Time.deltaTime);
@@ -117,7 +116,8 @@ public class nistyMov : MonoBehaviour
             }
         }
         grnd = controlador.isGrounded;
-    }*/
+    }
+    */
 
     void salto()
     {
@@ -128,28 +128,13 @@ public class nistyMov : MonoBehaviour
         if (controlador.isGrounded && velocidad.y < 0)
         {
             velocidad.y = 0;
-            estaSaltando = false;
-            saltoOportunidad = cantidadSaltos;
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) && saltoOportunidad > 0)
-        {
-            saltoOportunidad -= 1;
-            saltoSound.Play();
-            sumarSalto(fuerzaSalto);
-            Debug.Log("Saltanding");
-            estaSaltando = true;
-            
-        }
-
-        if (controlador.isGrounded)
-        {
-            estaSaltando = false;
-            //saltoOportunidad = cantidadSaltos;
+            if (Input.GetKeyDown(KeyCode.UpArrow) && controlador.isGrounded)
+            {
+                saltoSound.Play();
+                sumarSalto(fuerzaSalto);
+            }
         }
         grnd = controlador.isGrounded;
-        
-        
     }
 
     public void sumarSalto(float y)
@@ -162,4 +147,5 @@ public class nistyMov : MonoBehaviour
     {
         velocidad.x = x;
     }
+
 }

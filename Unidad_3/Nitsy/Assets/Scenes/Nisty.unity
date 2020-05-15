@@ -15788,8 +15788,12 @@ MonoBehaviour:
   fuerzaSalto: 12
   saltoMasAlto: 17
   grnd: 0
+  velocidad: {x: 0, y: 0}
   fuerzaSaltoActual: 0
   saltar: {fileID: 784990711}
+  cantidadSaltos: 1
+  saltoOportunidad: 0
+  estaSaltando: 0
 --- !u!114 &342644179
 MonoBehaviour:
   m_ObjectHideFlags: 0

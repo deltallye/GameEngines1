@@ -23,6 +23,7 @@ public class activarTrampolin : MonoBehaviour
         if (other.gameObject.tag == "trampolinY")
         {
             nistyComp.sumarSalto(saltoMasAlto);
+            nistyComp.saltoOportunidad = nistyComp.cantidadSaltos;
             Debug.Log("Activar");
         }
     }
