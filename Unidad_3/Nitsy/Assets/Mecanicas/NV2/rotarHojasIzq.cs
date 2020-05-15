@@ -55,7 +55,6 @@ public class rotarHojasIzq : MonoBehaviour
 
     public void girarAbajo()
     {
-        Debug.Log("girando" + this.transform.rotation.z);
         if (deboGirar == true && tenerAxisNormal == true)
         {
             this.transform.RotateAround(custonPivot.position, new Vector3(0, 0, 1 * Time.deltaTime), angulo);
@@ -66,7 +65,6 @@ public class rotarHojasIzq : MonoBehaviour
         {
             deboGirar = false;
             tenerAxisNormal = false;
-            Debug.Log("Termina de girar hacia abajo" + this.transform.rotation.z);
         }
     }
 
@@ -75,7 +73,7 @@ public class rotarHojasIzq : MonoBehaviour
         if (transform.rotation.z > 0 && tenerAxisNormal == false)// limite arriba
         {
             //mover arriba
-            Debug.Log("regresar hacia arriba" + this.transform.rotation.z);
+           
             this.transform.RotateAround(custonPivot.position, new Vector3(0, 0, 1 * Time.deltaTime), -2);
         }
         

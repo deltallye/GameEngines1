@@ -15,6 +15,10 @@ public class romperMuro : MonoBehaviour
     public bool dashing;
     Vector2 dirigirImpulso;
 
+    //Detectando muro
+    GameObject muroGameObj;
+
+
     void Start()
     {
         gameObNisty = GameObject.FindGameObjectWithTag("nisty");
@@ -24,6 +28,8 @@ public class romperMuro : MonoBehaviour
 
         fuerzaY.velocidad.x = 0;
         dashing = false;
+
+        muroGameObj = GameObject.FindGameObjectWithTag("Muro");
     }
 
     // Update is called once per frame
@@ -45,8 +51,6 @@ public class romperMuro : MonoBehaviour
             dashing = false;
             fuerzaY.velocidad.x = 0;
         }
-
-
     }
 
     public void dash()
@@ -61,6 +65,16 @@ public class romperMuro : MonoBehaviour
         {
             fuerzaY.velocidad.x -= 15f;
             tiempoImpulso -= Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Muro" && dashing == true)
+        {
+            //amuroGameObj.SetActive(false);
+            other.gameObject.SetActive(false);
+            Debug.Log("Activar");
         }
     }
 }
