@@ -119,7 +119,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 4fd59a65106737942aee2e9a09262be2, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &735810
 GameObject:
   m_ObjectHideFlags: 0
@@ -12464,6 +12464,7 @@ GameObject:
   - component: {fileID: 342644178}
   - component: {fileID: 342644179}
   - component: {fileID: 342644180}
+  - component: {fileID: 342644181}
   m_Layer: 0
   m_Name: nisty
   m_TagString: nisty
@@ -12583,6 +12584,7 @@ MonoBehaviour:
   fuerzaSalto: 12
   saltoMasAlto: 17
   grnd: 0
+  velocidad: {x: 0, y: 0}
   fuerzaSaltoActual: 0
   saltar: {fileID: 784990711}
 --- !u!114 &342644179
@@ -12615,6 +12617,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nuevoColor: {fileID: 2100000, guid: b590a536c7605aa408a1f4c8c2d5f9ee, type: 2}
+--- !u!114 &342644181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342644172}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6112787804cd2d941b73275a201fcdf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sumarImpulso: 0
+  dashVelocity: 0
+  tiempoImpulso: 0
+  sigImpulso: 0
 --- !u!4 &343549971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6786425139666162094, guid: 8976fd6f08c0c3747ab4b55e19682e7c,
@@ -37468,7 +37486,7 @@ Transform:
   - {fileID: 739372183}
   - {fileID: 1397478164}
   m_Father: {fileID: 5006512735020354949}
-  m_RootOrder: 45
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055442330
 GameObject:
@@ -49947,7 +49965,7 @@ Transform:
   - {fileID: 842658941}
   - {fileID: 1790390135}
   m_Father: {fileID: 5006512735020354949}
-  m_RootOrder: 28
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418487317
 GameObject:
@@ -57545,7 +57563,7 @@ Transform:
   - {fileID: 792147190}
   - {fileID: 912206518}
   m_Father: {fileID: 5006512735020354949}
-  m_RootOrder: 68
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611593505
 GameObject:
@@ -57727,6 +57745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1615845883}
+  - component: {fileID: 1615845884}
   m_Layer: 0
   m_Name: Tigre
   m_TagString: Untagged
@@ -57751,6 +57770,19 @@ Transform:
   m_Father: {fileID: 2004554434}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1615845884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615845882}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312400ce5a8bbe647965e6b3b3c96f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direccionTigre: 1
 --- !u!1 &1616024819
 GameObject:
   m_ObjectHideFlags: 0
@@ -79315,19 +79347,21 @@ Transform:
   - {fileID: 1658915771}
   - {fileID: 1172984299}
   - {fileID: 491789502}
+  - {fileID: 1416692202}
   - {fileID: 176705147}
   - {fileID: 566037652}
   - {fileID: 476697701}
   - {fileID: 1627858578}
   - {fileID: 1933283318661941045}
+  - {fileID: 1043357693}
   - {fileID: 257988017}
   - {fileID: 1437604809}
-  - {fileID: 1416692202}
   - {fileID: 52031534}
   - {fileID: 1363619158}
   - {fileID: 1878429701}
   - {fileID: 1152246643}
   - {fileID: 644035211}
+  - {fileID: 1605895593}
   - {fileID: 412965509}
   - {fileID: 554432218}
   - {fileID: 1261450462}
@@ -79339,7 +79373,6 @@ Transform:
   - {fileID: 782783474}
   - {fileID: 1791988921}
   - {fileID: 575298545}
-  - {fileID: 1043357693}
   - {fileID: 210240992}
   - {fileID: 1328451088}
   - {fileID: 151079342}
@@ -79362,7 +79395,6 @@ Transform:
   - {fileID: 601976543}
   - {fileID: 1363104097}
   - {fileID: 1036910353}
-  - {fileID: 1605895593}
   - {fileID: 530808095}
   - {fileID: 1901135651}
   - {fileID: 987375657}
@@ -80167,6 +80199,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5006512735644633759}
+  - component: {fileID: 8296172668882237581}
+  - component: {fileID: 8296172668882237582}
   m_Layer: 0
   m_Name: suelo
   m_TagString: Untagged
@@ -80174,6 +80208,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!195 &8296172668882237581
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668882237580}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!64 &8296172668882237582
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668882237580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &8296172668979085206
 GameObject:
   m_ObjectHideFlags: 0
