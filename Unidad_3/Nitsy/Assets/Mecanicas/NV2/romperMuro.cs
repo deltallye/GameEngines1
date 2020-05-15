@@ -18,13 +18,16 @@ public class romperMuro : MonoBehaviour
     //Detectando muro
     GameObject muroGameObj;
 
+    //Audio de romper muro
+    AudioSource rompermuro;
 
     void Start()
     {
         gameObNisty = GameObject.FindGameObjectWithTag("nisty");
         fuerzaY = gameObNisty.GetComponent<nistyMov>();
         dirigirImpulso = fuerzaY.velocidad;
-
+        //Audio del muro
+        rompermuro = GetComponent<AudioSource>();
 
         fuerzaY.velocidad.x = 0;
         dashing = false;
@@ -73,8 +76,10 @@ public class romperMuro : MonoBehaviour
         if (other.gameObject.tag == "Muro" && dashing == true)
         {
             //amuroGameObj.SetActive(false);
+            rompermuro.Play();
             other.gameObject.SetActive(false);
             Debug.Log("Activar");
+            rompermuro.Play();
         }
     }
 }
