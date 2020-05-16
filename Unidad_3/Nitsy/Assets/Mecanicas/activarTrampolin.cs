@@ -24,7 +24,7 @@ public class activarTrampolin : MonoBehaviour
         {
             nistyComp.sumarSalto(saltoMasAlto);
             nistyComp.saltoOportunidad = nistyComp.cantidadSaltos;
-            Debug.Log("Activar");
+        
         }
     }
 }

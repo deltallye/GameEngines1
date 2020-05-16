@@ -1,21 +1,29 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Tigre
     - activarTrampolin
     - balaRigid
     - camaraMov
     - cambiarColorBala
     - colisionEnemigos
+    - colisionTigre
+    - comportamientoCoco
     - disparar
     - enemigoMov
     - gota
+    - lanzarCocos
     - lava
     - manejoNivel
     - menus
+    - monoEnemigo
     - mostrarPantallaTxt
     - movLimites
     - nistyMov
     - puntuacion
+    - romperMuro
+    - rotarHojas
+    - rotarHojasIzq
     - spanLluvia
     - tomarFruta
     - trampolinY
@@ -98,33 +106,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10456}
+      Script: {instanceID: 10458}
     - Class: 114
-      Script: {instanceID: 10484}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 10558}
-    - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10560}
     - Class: 114
       Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10682}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 10970}
+      Script: {instanceID: 10688}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 10976}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11132}
+      Script: {instanceID: 11046}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11182}
     - Class: 114
-      Script: {instanceID: 11380}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11392}
+    - Class: 114
+      Script: {instanceID: 11398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,33 +223,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10456}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10484}
+      Script: {instanceID: 10458}
     - Class: 114
-      Script: {instanceID: 10558}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10560}
+    - Class: 114
+      Script: {instanceID: 10564}
     - Class: 114
       Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10682}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 10970}
+      Script: {instanceID: 10688}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 10976}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11132}
+      Script: {instanceID: 11046}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11182}
+    - Class: 114
+      Script: {instanceID: 11286}
+    - Class: 114
+      Script: {instanceID: 11346}
     - Class: 114
       Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11392}
+    - Class: 114
+      Script: {instanceID: 11398}
+    - Class: 114
+      Script: {instanceID: 1528898}
+    - Class: 114
+      Script: {instanceID: 1937724}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -293,6 +313,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -332,31 +354,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10456}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10484}
+      Script: {instanceID: 10458}
     - Class: 114
-      Script: {instanceID: 10558}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10560}
+    - Class: 114
+      Script: {instanceID: 10564}
     - Class: 114
       Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10682}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 10688}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11132}
+      Script: {instanceID: 11046}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11138}
+    - Class: 114
+      Script: {instanceID: 11182}
+    - Class: 114
+      Script: {instanceID: 11286}
     - Class: 114
       Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11380}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11392}
+    - Class: 114
+      Script: {instanceID: 11398}
+    - Class: 114
+      Script: {instanceID: 1294392}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -368,6 +400,10 @@ ScriptsOnlyBuild:
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 191
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -534,7 +570,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 59a3fe61f39a6385e76856753f9b4bce
+      Hash: 038d4fea9034e85ad1daa633eb87b915
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: nistyMov
@@ -630,6 +666,12 @@ ScriptsOnlyBuild:
     className: spanLluvia
   - hash:
       serializedVersion: 2
+      Hash: ac85e2d6b5d8f1fca01d149bfe8bd885
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: rotarHojasIzq
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -672,6 +714,12 @@ ScriptsOnlyBuild:
     className: balaRigid
   - hash:
       serializedVersion: 2
+      Hash: f94f1abb4ec25dae4189064d11da3102
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: romperMuro
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -694,6 +742,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 4fae716d048d34756e4f9bdb35a19123
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: nistyMovDobleSalto
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -816,6 +870,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: ac85e2d6b5d8f1fca01d149bfe8bd885
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: rotarHojas
+  - hash:
+      serializedVersion: 2
       Hash: df434544c9f7b33d1cc7e635b180d279
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -840,6 +900,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: e9610e10425e224fdeeebae99ad0041b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tigre
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -862,6 +928,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 7fd570f20a9d3f3d5276f6e2013db61c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: lanzarCocos
   - hash:
       serializedVersion: 2
       Hash: 20eeaeae829475b5e354d1f626c51a2b
@@ -916,9 +988,27 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: colisionTigre
+  - hash:
+      serializedVersion: 2
+      Hash: e38c4b30eeec2e7f541546aa47ab1bc6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: comportamientoCoco
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: monoEnemigo
   platform: 5
   scenePathNames:
   - Assets/Scenes/Nisty.unity
   - Assets/Scenes/nivel2.unity
   - Assets/Scenes/nivel3.unity
-  playerPath: C:/Users/sears/Desktop/Nitsy.exe
+  playerPath: C:/Users/Jesus/Desktop/Nisty Juego/Nitsy.exe

@@ -137,7 +137,7 @@ public class nistyMov : MonoBehaviour
             saltoOportunidad -= 1;
             saltoSound.Play();
             sumarSalto(fuerzaSalto);
-            Debug.Log("Saltanding");
+        
             estaSaltando = true;
             
         }

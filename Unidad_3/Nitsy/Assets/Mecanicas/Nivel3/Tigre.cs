@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Tigre : MonoBehaviour
 {
-    NavMeshAgent TigreAgent;
+    public NavMeshAgent TigreAgent;
     GameObject Nisty;
     AudioSource zarpazo;
 
@@ -28,7 +28,7 @@ public class Tigre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        /*if (Input.GetKeyDown(KeyCode.F))
         {
             if (direccionTigre == true)
             {
@@ -38,10 +38,11 @@ public class Tigre : MonoBehaviour
             {
                 direccionTigre = true;
             }
-        }
+        }*/
         if (direccionTigre == true)
         {
             TigreAgent.SetDestination(Nisty.transform.position);
+            //TigreAgent.SetDestination()
         }
     }
 

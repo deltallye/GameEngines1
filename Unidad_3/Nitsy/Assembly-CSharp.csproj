@@ -73,8 +73,11 @@
     <Compile Include="Assets\Mecanicas\colisionEnemigos.cs" />
     <Compile Include="Assets\Mecanicas\disparar.cs" />
     <Compile Include="Assets\Mecanicas\manejoNivel.cs" />
+    <Compile Include="Assets\Mecanicas\monoEnemigo.cs" />
+    <Compile Include="Assets\Mecanicas\Nivel3\colisionTigre.cs" />
     <Compile Include="Assets\Mecanicas\Nivel3\nistyMovDobleSalto.cs" />
     <Compile Include="Assets\Mecanicas\Nivel3\Tigre.cs" />
+    <Compile Include="Assets\Mecanicas\NV2\comportamientoCoco.cs" />
     <Compile Include="Assets\Mecanicas\NV2\lanzarCocos.cs" />
     <Compile Include="Assets\Mecanicas\NV2\romperMuro.cs" />
     <Compile Include="Assets\Mecanicas\NV2\rotarHojas.cs" />

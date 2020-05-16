@@ -70,6 +70,7 @@ public class balaRigid : MonoBehaviour
         
         if(other.gameObject.tag == "enemigo")
         {
+
             //enemigoComp.quitarVidaEnemigo(1);
             Destroy(this.gameObject);
             
@@ -81,6 +82,16 @@ public class balaRigid : MonoBehaviour
             
         }
         if (other.gameObject.tag == "paredCol")
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (other.gameObject.tag == "monoenemigo")
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (other.gameObject.tag == "Muro")
         {
             Destroy(this.gameObject);
         }

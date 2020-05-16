@@ -28,7 +28,7 @@ public class colisionEnemigos : MonoBehaviour
         {
             vida.quitarVida(1);
             Debug.Log("Hizo contacto con Enemigo");
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
 
         if (other.gameObject.tag == "Tigre")
@@ -39,6 +39,12 @@ public class colisionEnemigos : MonoBehaviour
         }
 
         if (other.gameObject.tag == "gota")
+        {
+            vida.quitarVida(1);
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "cokito")
         {
             vida.quitarVida(1);
             Destroy(other.gameObject);

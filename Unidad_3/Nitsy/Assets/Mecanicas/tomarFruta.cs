@@ -54,5 +54,11 @@ public class tomarFruta : MonoBehaviour
             //agregar.agregarPuntaje(2);
             Destroy(other.gameObject);
         }
+        /*
+        if (other.gameObject.tag == "Tigre")
+        {
+            Debug.Log("Me balaciaron los municipales");
+            agregar.agregarPuntaje(2);
+        }*/
     }
 }

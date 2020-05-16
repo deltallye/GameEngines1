@@ -26,6 +26,9 @@ TagManager:
   - prefabBala
   - Muro
   - Tigre
+  - limiteSueloCoco
+  - cokito
+  - monoenemigo
   layers:
   - Default
   - TransparentFX
