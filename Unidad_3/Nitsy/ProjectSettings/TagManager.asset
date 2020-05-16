@@ -25,6 +25,7 @@ TagManager:
   - frutaMiel
   - prefabBala
   - Muro
+  - Tigre
   layers:
   - Default
   - TransparentFX

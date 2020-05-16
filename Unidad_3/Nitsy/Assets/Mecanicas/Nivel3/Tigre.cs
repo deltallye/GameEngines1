@@ -7,6 +7,10 @@ public class Tigre : MonoBehaviour
 {
     NavMeshAgent TigreAgent;
     GameObject Nisty;
+    AudioSource zarpazo;
+
+    GameObject gameObVida;
+    vidaActual vida;
 
     public bool direccionTigre;
 
@@ -14,6 +18,9 @@ public class Tigre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObVida = GameObject.FindGameObjectWithTag("GameManager");
+        vida = gameObVida.GetComponent<vidaActual>();
+
         TigreAgent = GetComponent<NavMeshAgent>();
         Nisty = GameObject.FindGameObjectWithTag("nisty");
     }
@@ -32,13 +39,20 @@ public class Tigre : MonoBehaviour
                 direccionTigre = true;
             }
         }
+        if (direccionTigre == true)
+        {
+            TigreAgent.SetDestination(Nisty.transform.position);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "nisty")
         {
+            zarpazo.Play();
+            Debug.Log("Zarpazo de tigre");
             Debug.Log("Se destruye el Tigresito");
+            vida.quitarVida(1);
             Destroy(this.gameObject);
         }
     }
