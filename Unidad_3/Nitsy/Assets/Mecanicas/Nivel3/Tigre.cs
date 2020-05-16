@@ -45,7 +45,7 @@ public class Tigre : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "nisty")
         {
@@ -53,7 +53,7 @@ public class Tigre : MonoBehaviour
             Debug.Log("Zarpazo de tigre");
             Debug.Log("Se destruye el Tigresito");
             vida.quitarVida(1);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
-    }
+    }*/
 }

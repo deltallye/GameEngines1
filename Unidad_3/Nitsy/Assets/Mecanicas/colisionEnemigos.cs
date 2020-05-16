@@ -7,7 +7,7 @@ public class colisionEnemigos : MonoBehaviour
     //Mandar una vida
     GameObject gameObVida;
     vidaActual vida;
-    AudioSource zarpazo;
+    //AudioSource zarpazo;
     void Start()
     {
         gameObVida = GameObject.FindGameObjectWithTag("GameManager");
@@ -33,9 +33,9 @@ public class colisionEnemigos : MonoBehaviour
 
         if (other.gameObject.tag == "Tigre")
         {
-            zarpazo.Play();
+            //zarpazo.Play();
             Debug.Log("Zarpazo de tigre en colisionEnemigo");
-            vida.quitarVida(1);
+            //vida.quitarVida(1);
         }
 
         if (other.gameObject.tag == "gota")
